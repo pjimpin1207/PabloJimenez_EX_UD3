@@ -140,7 +140,11 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaResultados.setModel(modelovacio);
     }//GEN-LAST:event_bResetearActionPerformed
 
-   
+   /*
+    Elige partido aleatorio.
+    @param int n1, int n2
+    @return  devuelve un partido random
+    */
     public int cualquiera(int n1, int n2)
     {
         return (int)Math.floor((Math.random()*(n2-n1+1) + n1));
@@ -173,6 +177,7 @@ public class Apuesta extends javax.swing.JFrame {
     }//GEN-LAST:event_bRealizarActionPerformed
 
     
+    
     public void partidoNuevo(String partido)
     {
         DefaultListModel modelonuevo = new DefaultListModel();
@@ -186,7 +191,11 @@ public class Apuesta extends javax.swing.JFrame {
         this.listaQuiniela.setModel(modelonuevo);
     }
     
-  
+     /*
+   Borra un partido
+    @param listaQuiniela listaResultados
+    @return  elimina un partido
+    */
     public void borrarPartido(int indice)
     {
         DefaultListModel modelonuevoquiniela = new DefaultListModel();
